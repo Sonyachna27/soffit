@@ -1,0 +1,42 @@
+.discount{
+   
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        background-color: $-blue;
+        border-radius: 20px;
+        @media screen and (max-width:867px) {
+            flex-direction: column;
+            gap: 10px;
+        }
+        &-info{
+            display: flex;
+            flex-direction: column;
+           padding: 60px 0 60px 60px;
+           max-width: 680px;
+           width: 100%;
+            color: $-white;
+            justify-content: center;
+            @media screen and (max-width:867px) {
+                padding: 30px;
+            }
+            & h2{
+                margin-bottom: 5px;
+            }
+            & p:nth-last-of-type(1){
+                margin-bottom: 50px;
+            }
+        }
+       
+            & img{
+                border-radius: inherit;
+                object-fit: cover;
+                max-width: 531px;
+                border-radius: 210px 20px 20px 210px;
+                @media screen and (max-width:867px) {
+                    border-radius: 20px;
+                    max-width: 100%;
+                }
+            }
+    }
+}

@@ -1,0 +1,63 @@
+.services{
+    &__container{
+        &-cards{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            align-content: stretch;
+            @media screen and (max-width:1023px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width:767px) {
+                display: flex;
+                flex-direction: column;
+            }
+            
+            &-card{
+                display: flex;
+                flex-direction: column;
+                border-radius: 20px;
+                & img{
+                    object-fit: cover;
+                    max-width: 100%;
+                    width: 100%;
+                    max-height: 220px;
+                    min-height: 220px;
+                    height: 100%;
+                    border-radius:  20px 20px 0 0 ;
+                }
+                &-description{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 30px;
+                    background-color: $-white;
+                    border-radius: 0 0 20px 20px;
+                    border:1px solid $-blue;
+                    border-top: none;
+                    align-content: stretch;
+                    flex-grow: 1;
+
+                    & h3{
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        color: $-blue;
+                        margin-bottom: 10px;
+                    }
+                    & p{
+                        font-size: 14px;
+                        margin-bottom: 20px;
+                    }
+                    & .btn{
+                        max-width: 100%;
+                        width: 100%;
+                        margin-top: auto;
+                        padding: 10px 30px;
+                        justify-content: flex-start;
+                    }
+                }
+            }
+        }
+    }
+}

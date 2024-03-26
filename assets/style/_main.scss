@@ -1,0 +1,18 @@
+.main{
+    &__container{
+        background: url(../images/main-img.jpg) center center / cover no-repeat;
+        border-radius: 20px;
+        padding: 60px 0 284px 40px;
+        &-content{
+            
+            max-width: 788px;
+            display: flex;
+            flex-direction: column;
+
+            & p{
+                color: $-white;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

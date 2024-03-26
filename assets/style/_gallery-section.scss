@@ -1,0 +1,38 @@
+.gallery{
+    &__container{
+        .gallery-button-prev,
+        .gallery-button-next{
+                border-color: $-blue;
+                &:hover{
+                    & svg path{
+                        fill: $-white;
+                    }
+                }
+            & svg {
+                path{
+                    fill: $-blue;
+                }
+            }
+            
+        }
+       
+       &-slider{
+        &  .swiper-wrapper {
+            padding-bottom: 30px;
+        }
+        & .swiper-pagination-bullets.swiper-pagination-bullets{
+            bottom: 4px;
+           }
+           & .swiper-pagination-bullet.swiper-pagination-bullet{
+            height: 10px;
+            width: 10px;
+            background-color: $-gray-line;
+            opacity: 1;
+            cursor: pointer;
+           }
+           & .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+            background-color: $-blue;
+           }
+       } 
+    }
+}

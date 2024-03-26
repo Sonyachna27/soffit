@@ -1,0 +1,250 @@
+.header{
+    margin-bottom: 20px;
+    @media screen and (max-width:1023px){
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 50;
+        }
+        &__top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 5px 0  ;
+            .header__bottom-container & {
+                display: none;
+            }
+            @media screen and (max-width:1023px) {
+                display: none;
+                .header__bottom-container-wrap & {
+                    display: flex;
+                    flex-direction: column;
+                } 
+            }
+            
+            &-socials{
+                display: flex;
+                gap: 5px;
+                & a{
+                    max-width: 30px;
+                    max-height: 31px;
+                    width: 100%;
+                    height: 100%;
+                    transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+                    &:hover{
+                        & svg circle{
+                            fill: $-beruza;
+                        }
+                    }
+                    & svg{
+                        max-width: 29px;
+                        max-height: 29px;
+                        width: 100%;
+                        height: 100%;
+                        transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+                        & circle{
+                            transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+                        }
+                    }
+                }
+            }
+            &-contacts{
+                display: flex;
+                gap: 10px;
+                & a,
+                & span{
+                    background-color: $-white;
+                    border-radius: 500px;
+                    display: flex;
+                    color: $-black;
+                    border: 1px solid $-black;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    gap: 11px;
+                    padding: 0px 15px 0 0;
+                    text-overflow: ellipsis;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    max-width: fit-content;
+                    transition: .3s ease;
+                    @media screen and (max-width:367px) {
+                        gap: 15px;
+                    }
+                        & svg{
+                        min-height: 30px;   
+                        max-width: 30px;
+                        max-height: 30px;
+                        width: 100%;
+                        height: 100%;
+                }
+                        
+                }
+                & a{
+                    &:hover{
+                        background-color: $-beruza;
+                        border-color: transparent;
+                        color: $-white;
+                    }
+                }
+                @media screen and (max-width:1023px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+        &__bottom{
+            background-color: $-white;
+           &-container{
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+           justify-content: space-between;
+           & .logo{
+            margin-right: auto;
+           }
+            &-wrap{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 70%;
+                gap: 10px;
+                @media screen and (max-width:1100px) {
+                    width: 80%;
+                }
+                @media  screen and (max-width:1023px) {
+                        flex-direction: column;
+                        justify-content: center;
+                        width: 100%;
+                        height: 100vh;
+                        position: fixed;
+                        top: -100%;
+                        left: 0;
+                        transform: scale(0);
+                        background-color: $-white;
+                        transition: all .5s ease;
+                        z-index: 20;
+                        padding: 0 10px;
+                        .open & {
+                            top: 64px;
+                            transform: scale(1);
+                        }
+                }
+                & nav{
+                    & ul{
+                        display: flex;
+                        align-items: center;
+                        gap: 50px;
+                        
+                        @media screen and (max-width:1023px) {
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                        .current-menu-item   {
+                           &:after{
+                                width: 100%;
+                            
+                           }
+                       }
+                        & li{
+                            color: $-black;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+                            position: relative;
+                            &:after{
+                                content: '';
+                                width: 0%;
+                                height: 2px;
+                                position: absolute;
+                                bottom: -20px;
+                                left: 0;
+                                background-color: $-beruza;
+                                transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+                                @media screen and (max-width:1023px) {
+                                    display: none;
+                                }
+                            }
+                            &:hover{
+                                color: $-beruza;
+                                &:after{
+                                    width: 100%;
+                                }
+                            }
+                     
+                            
+                            & a{
+                                font:inherit;
+                                transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .5s;
+                            }
+                        }
+                    }
+                }
+                
+            }
+           
+            .burgerBtn {
+
+              display: none;
+              @media  screen and (max-width:1023px) {
+                display: block;
+                width: 45px;
+                height: 45px;
+                background-color: $-beruza;
+                cursor: pointer;
+                position: relative;
+                border-radius: 5px;
+                .line {
+                    display: block;
+                    width: 30px;
+                    height: 2px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translate(25%, -50%);
+                    background-color: $-blue;
+            
+                    &:before,
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 30px;
+                        height: 2px;
+                        position: absolute;
+                        left: 0;
+                        background-color: $-blue;
+                        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+                    }
+            
+                    &:after {
+                        top: 10px;
+                    }
+            
+                    &:before {
+                        bottom: 10px;
+                    }
+                }
+                &.open {
+                    .line:after {
+                        top: 10px;
+                        transform: rotate(310deg) scale(.7) translate(12px, 8px);
+                    }
+            
+                    .line:before {
+                        bottom: 10px;
+                        transform: rotate(-310deg) scale(.7) translate(12px, -8px);
+                    }
+                }
+              }
+            }
+           }
+        }
+    }

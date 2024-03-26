@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'Manrope';
+    src: url(../fonts/Manrope-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url(../fonts/Manrope-Medium.ttf);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url(../fonts/Manrope-SemiBold.ttf);
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Manrope';
+    src: url(../fonts/Manrope-Bold.ttf);
+    font-weight: 700;
+}
+
+$-beruza: #36B0E1;
+$-black: #2B2B2B;
+$-blue: #004B98;
+$-gray: #F0F1F2;
+$-gray1: #333333;
+$-gray-line: #C7C7C7;
+$-white: #ffffff;
+$-yellow: #F7B704;
+$-lite-blue: #47C9FD;
+$-dark-blue: #0F284D;
+$-lite-gray:#D9D9D9;
+$-gray-dark: #202020;
+
+
+body{
+    font-family: 'Manrope';
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    background: $-gray;
+}
+main{
+   
+    @media screen and (max-width:1023px) {
+        margin-top: 65px;
+    }
+}
+.container{
+    max-width: 1330px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1{
+    color: $-white;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+h2{
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+h1 span,
+h2 span{
+    font: inherit;
+    color: $-lite-blue;
+}
+a{
+    transition: inherit;
+}
+p{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.btn{
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    max-width: 202px;
+    width: 100%;
+    padding: 10px 40px;
+    align-items: center;
+    gap: 10px;
+    background-color: $-white;
+    position: relative;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $-blue;
+    transition: all ease .5s;
+
+        & svg{
+            max-width: 32px;
+            max-width: 32px;
+            width: 100%;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            transition: all ease .5s;
+            & circle{
+                fill: $-blue;
+                transition: all ease .5s;
+            }
+            & path{
+                fill: $-white;
+                transition: all ease .5s;
+            }
+        }
+    &:hover{
+        background-color: $-beruza;
+        color: $-white;
+        & svg {
+            & path{
+                    fill: $-beruza;
+            }
+            & circle{
+                fill:$-white;
+            }
+        }
+    }
+}
+.blue-btn{
+    background: $-blue;
+    color: $-white;
+    &:hover{
+        color: $-white;
+    }
+        & svg {
+              & circle{
+            fill: $-white;
+                } 
+            & path{
+                fill: $-blue;
+            }
+        }
+     
+}
+.mb-m{
+    margin-bottom: 120px;
+    @media screen  and (max-width:767px){
+        margin-bottom: 60px;
+    }
+}
+.column-title{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 500px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    & div{
+        display: inline-flex;
+        padding: 10px 30px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 500px;
+        border: 1px solid $-black;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        max-width: fit-content;
+    }
+    & h2{
+        color: $-blue;
+    }
+}
+.row-title{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    color: $-blue;
+}
+
+// .sectionScroll {
+//     opacity: 0;
+//     visibility: hidden;
+//     // transform: translate(0px, 50px);
+//     transition: opacity 0.5s ease, transform 0.5s ease;
+// }
+
+// .animate {
+//     opacity: 1;
+//     visibility: visible;
+//     transform: translate(0px, 0px);
+//     animation: example 2s  ;
+// }
+
+
+// @keyframes example {
+//     from {
+//         opacity: 0;
+//         visibility: hidden;
+//         transform: translateY(var(--startScrollTop, 150px)); 
+//         // transform: translate(-100%, 100vh); 
+//     }
+//     to {
+//         opacity: 1;
+//         visibility: visible;
+//         transform: translateY(calc(var(--scrollTop) / 10)); 
+//         // transform: translate(0, 0); 
+//     }
+// }
+.white-block{
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 500px;
+    border: 1px solid $-gray;
+    max-width: fit-content;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+ .arrows{
+    position: relative;
+    margin-top: auto;
+    max-width: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 
+    fit-content;
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+        display: none;
+    }
+    & .arrow{
+        position: relative;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border:1px solid $-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        pointer-events: auto;
+        cursor: pointer;
+        transition: .5s ease;
+        & svg{
+            transition: .5s ease;
+            width: 17px;
+            height: 12px;
+        }
+        &:hover{
+            background-color: $-blue;
+            border-color: transparent;
+        }
+    }
+    & .prev{
+        &:hover{
+            background-color: $-blue;
+            border-color: transparent;
+        }
+        & svg{
+            transform: rotate(180deg);
+        }
+    }
+    & .next{
+        right: 0;
+        left: inherit;
+        &:hover{
+            background-color: $-blue;
+            border-color: transparent;
+        }
+    }
+}
+.lumious{
+display: flex;
+align-items: center;
+gap: 10px;
+max-width: 235px;
+}
