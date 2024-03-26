@@ -255,6 +255,31 @@ p {
   color: #004B98;
 }
 
+.sectionScroll {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  animation: example 2s;
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(var(--startScrollTop, 150px));
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(calc(var(--scrollTop) / 10));
+  }
+}
 .white-block {
   display: inline-flex;
   padding: 10px 20px;
