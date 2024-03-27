@@ -1,0 +1,220 @@
+
+.estimate{
+    &__container{
+        display: grid;
+        grid-template-columns: .328fr .67fr;
+        gap: 20px;
+        @media screen and (max-width:767px) {
+            display: flex;
+            flex-direction: column;
+        }
+        & img{
+            max-width: 420px;
+            width: 100%;
+            border-radius: 20px;
+            aspect-ratio: 1 / 1;
+            @media screen and (max-width:767px) {
+                max-width: 100%;
+            }
+        }
+       &-wrap{
+        padding: 60px;
+        background-color: $-white;
+        border-radius: 20px;
+        @media screen and (max-width:1023px) {    
+        padding: 30px;
+        }
+        @media screen and (max-width:767px) {    
+        padding: 20px;
+        }
+       & h2{
+        margin-bottom: 10px;
+        color:$-blue;
+        }
+        & p:nth-last-of-type(1){
+            margin-bottom: 40px;
+        }
+        & form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            .input-wrap {
+                position: relative;
+                width: 48%;
+                
+                &:has(textarea) {
+                    width: 100%;
+                }
+                @media screen and (max-width:1023px) {    
+                    width: 100%;
+                    }
+               & input, 
+               & select,
+               & textarea {
+                display: flex;
+                width: 100%;
+                padding: 18px;
+                align-items: flex-start;
+                gap: 10px;
+                flex-shrink: 0;
+                border-radius: 500px;
+                border: 1px solid $-gray-line;
+                background: $-gray;
+                color: $-black;
+                cursor: pointer;
+                &::placeholder{
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    color: $-black;
+                }
+                &:focus-within {
+                    border-color: $-black;
+                    &::placeholder {
+                        color: $-blue; 
+                        transform: translateY(-15px);
+                    }
+                }
+                }
+                & textarea{
+                    border-radius: 20px;
+                    min-height: 180px;
+                    resize: none;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            
+               & label {
+                    position: absolute;
+                    top: 0;
+                    transform: translate(0px, 80%);
+                    left: 18px;
+                    padding: 0 5px;
+                    color: $-black;
+                    font-size: 16px;
+                    transition: top 0.3s, color 0.3s, font-size 0.3s;
+                }
+                .up {
+                    top: -5px;
+                    left: 18px;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    color: $-blue;
+               } 
+               & input:focus ~ label,
+                & select:focus ~ label,
+               & textarea:focus ~ label {
+                top: -5px;
+                left: 18px;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                color: $-blue;
+                }
+            
+            }
+            
+            .select-wrap{
+                position: relative;
+                width: 100%;
+                display: flex;
+                width: 100%;
+              
+                &:before {
+                    content: '';
+                    width: 11px;
+                    height: 11px;
+                    position: absolute;
+                    right: 21px;
+                    top: 45%;
+                    z-index: 15;
+                    background: url(../images/vector.svg) no-repeat; 
+                    transform: translateY(0) rotate(0); 
+                    transition: transform 0.3s ease; 
+                }
+                & select{
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    color: inherit;
+                    display: flex;
+                    padding: 18px;
+                    align-items: flex-start;
+                    gap: 10px;
+                    flex-shrink: 0;
+                    border-radius: 500px;
+                    border: 1px solid $-gray-line;
+                    background: $-gray;
+                    color: $-black;
+                    cursor: pointer;
+                    option {
+                        font: inherit;
+                            display: block;
+                            white-space: nowrap;
+                        color: inherit;
+                        option:hover {
+                            background-color: $-beruza;
+                        }
+                }
+            }
+            &:focus-within:before {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+            .submit-wrap{
+                width: 100%;
+                position: relative;
+                & input{
+                    display: flex;
+                    width: 100%;
+                    padding: 18px;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    flex-shrink: 0;
+                    border-radius: 500px;
+                    color: $-white;
+                    cursor: pointer;
+                    background: $-blue;
+                    outline: none;
+                    border: none;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    transition: .3s ease;
+                    @media screen and (max-width:367px) {
+                        justify-content: flex-start;
+                    }
+                    &:hover{
+                        background-color: $-beruza;
+                    }
+                }
+                & svg{
+                    position: absolute;
+                    right: 10px;
+                    transform: translate(0%, 25%);
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    transition: all .3s ease;
+                    & path{
+                        transition: all .3s ease; 
+                    }
+                }
+                input:hover ~ svg path{
+                    fill: $-beruza;
+                }
+            }
+        }
+       } 
+    }
+}
