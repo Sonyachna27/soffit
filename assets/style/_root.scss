@@ -44,7 +44,13 @@ body{
 main{
    
     @media screen and (max-width:1023px) {
-        margin-top: 65px;
+        margin-top: 105px;
+    }
+}
+.other-page{
+    margin-top: 20px;
+    @media screen and (max-width:1023px) {
+        margin-top: 105px;
     }
 }
 .container{
@@ -59,6 +65,11 @@ h1{
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
+}
+.single-title{
+    font-size: 32px;
+    color: $-blue;
+    margin-bottom: 60px;
 }
 h2{
     font-size: 32px;
@@ -150,6 +161,20 @@ p{
         margin-bottom: 60px;
     }
 }
+.breadcrumbs{
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  &-wrap{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
 .column-title{
     display: flex;
     flex-direction: column;
@@ -188,35 +213,35 @@ p{
     color: $-blue;
 }
 
-.sectionScroll {
-    opacity: 0;
-    visibility: hidden;
-    // transform: translate(0px, 50px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
+// .sectionScroll {
+//     opacity: 0;
+//     visibility: hidden;
+//     // transform: translate(0px, 50px);
+//     transition: opacity 0.3s ease, transform 0.3s ease;
+// }
 
-.animate {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, 0px);
-    animation: example 2s  ;
-}
+// .animate {
+//     opacity: 1;
+//     visibility: visible;
+//     transform: translate(0px, 0px);
+//     animation: example 1s  ;
+// }
 
 
-@keyframes example {
-    from {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(var(--startScrollTop, 150px)); 
-        // transform: translate(-100%, 100vh); 
-    }
-    to {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(calc(var(--scrollTop) / 10)); 
-        // transform: translate(0, 0); 
-    }
-}
+// @keyframes example {
+//     from {
+//         opacity: 0;
+//         visibility: hidden;
+//         transform: translateY(var(--startScrollTop, 150px)); 
+//         // transform: translate(-100%, 100vh); 
+//     }
+//     to {
+//         opacity: 1;
+//         visibility: visible;
+//         transform: translateY(calc(var(--scrollTop) / 10)); 
+//         // transform: translate(0, 0); 
+//     }
+// }
 .white-block{
     display: inline-flex;
     padding: 10px 20px;

@@ -73,7 +73,12 @@
                         line-height: normal;
                         text-transform: none;
                     }
-                       
+                    & a{
+                        transition: .3s ease;
+                        &:hover{
+                            color: $-beruza;
+                        }
+                    }
                     & svg{
                         min-width: 30px;
                         min-height: 30px;
