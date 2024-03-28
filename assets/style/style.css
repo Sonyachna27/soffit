@@ -1690,7 +1690,7 @@ p {
 .area__container {
   display: grid;
   gap: 20px;
-  grid-template-columns: 0.415fr 0.57fr;
+  grid-template-columns: 0.415fr 0.59fr;
 }
 @media screen and (max-width: 1023px) {
   .area__container {
@@ -1744,6 +1744,7 @@ p {
 }
 .area__container-map {
   border-radius: 20px;
+  max-width: 100%;
 }
 .area__container-map img {
   border-radius: inherit;
@@ -1755,12 +1756,14 @@ p {
 @media screen and (max-width: 990px) {
   .area__container-map img {
     min-height: 560px;
+    max-height: 560px;
     height: 100%;
   }
 }
-@media screen and (max-width: 7670px) {
+@media screen and (max-width: 767px) {
   .area__container-map img {
     min-height: 360px;
+    max-height: 360px;
   }
 }
 

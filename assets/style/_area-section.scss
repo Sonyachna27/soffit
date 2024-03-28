@@ -3,7 +3,7 @@
     &__container{
         display: grid;
         gap: 20px;
-        grid-template-columns: .415fr .57fr;
+        grid-template-columns: .415fr .59fr;
         @media screen and (max-width:1023px) {
             display: flex;
             flex-direction: column;
@@ -52,6 +52,7 @@
         }
         &-map{
             border-radius: 20px;
+            max-width: 100%;
             & img{
                 border-radius: inherit;
                 max-width: 100%;
@@ -59,10 +60,12 @@
                 height: 100%;
                 @media screen and (max-width:990px) {
                     min-height: 560px;
+                    max-height: 560px;
                     height: 100%;
                 }
-                @media screen and (max-width:7670px) {
+                @media screen and (max-width:767px) {
                     min-height: 360px;
+                    max-height: 360px;
                 }
             }
             
