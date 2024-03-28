@@ -31,6 +31,8 @@
                     border-radius: 500px;
                     border:1px solid $-blue;
                     background-color: $-white;
+                    position: relative;
+                    z-index: 1;
                     @media screen and (max-width:767px) {
                       padding: 12px 12px 12px 30px;
                       gap: 30px;
@@ -81,16 +83,10 @@
                     opacity: 0;
                     max-height: 0;
                     overflow: hidden;
-                    transition: all .3s linear;
-                    padding: 0px;
-                    margin-top: 0px;
-                    font-size: 16px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: #ffffff;
-               
-                position: relative;
+                    transition: .35s ease;
+                    padding: 0px 30px 0px 30px;
+                    
+                    position: relative;
                     & p{
                       color: #000;
                       font-size: 16px;
@@ -98,7 +94,7 @@
                       font-weight: 400;
                       line-height: normal;
                       max-height: inherit;
-                      transition: all .3s linear;
+                      transition:  .35s ease ;
                   }
                   }
                  
@@ -117,9 +113,13 @@
                 border-radius: 0px 0px 20px 20px;
                 margin-top: -54px;
                 z-index: -5;
-                
+                font-size: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #ffffff;
                 & p{
-                    height: inherit;
+                    max-height: inherit;
                 }
                 @media screen and (max-width:767px) {
                   padding: 74px 30px 30px 30px;
