@@ -65,6 +65,9 @@ h1{
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 20px;
+    @media screen and (max-width:367px) {
+        font-size: 32px;
+    }
 }
 .single-title{
     font-size: 32px;
@@ -75,6 +78,9 @@ h2{
     font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
+    @media screen and (max-width:367px) {
+        font-size: 26px;
+    }
 }
 h1 span,
 h2 span{
@@ -107,7 +113,6 @@ p{
     line-height: normal;
     color: $-blue;
     transition: all ease .5s;
-
         & svg{
             max-width: 32px;
             max-width: 32px;
@@ -211,6 +216,26 @@ p{
     justify-content: space-between;
     margin-bottom: 40px;
     color: $-blue;
+    & p{
+        max-width: 380px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        @media screen and (max-width:990px) {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width:990px) {
+        flex-direction: column;
+        max-width: 500px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 40px;
+    }
 }
 
 // .sectionScroll {
