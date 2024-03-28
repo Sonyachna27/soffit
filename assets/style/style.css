@@ -1156,6 +1156,12 @@ p {
 .gallery__container-slider .swiper-wrapper {
   padding-bottom: 30px;
 }
+.gallery__container-slider .gallery__container-slider-slide {
+  border-radius: 20px;
+}
+.gallery__container-slider .gallery__container-slider-slide img {
+  border-radius: inherit;
+}
 .gallery__container-slider .swiper-pagination-bullets.swiper-pagination-bullets {
   bottom: 4px;
 }
@@ -1268,6 +1274,7 @@ p {
   flex-direction: column;
   margin-bottom: 40px;
   gap: 10px;
+  overflow: hidden;
 }
 .faq__container-accord-item {
   max-width: 100%;
@@ -1355,7 +1362,23 @@ p {
   max-height: 0;
   overflow: hidden;
   transition: all 0.3s linear;
-  padding: 0px 30px 0px 0px;
+  padding: 0px;
+  margin-top: 0px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  position: relative;
+}
+.faq__container-accord-item-bottom p {
+  color: #000;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-height: inherit;
+  transition: all 0.3s linear;
 }
 .faq__container .faq__container-accord-item:hover .faq__container-accord-item-top svg circle {
   fill: #36B0E1;
@@ -1365,24 +1388,14 @@ p {
   max-height: 100vh;
   overflow: visible;
   padding: 80px 30px 30px 30px;
-  border-radius: 0 0 10px 10px;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
   border: 1px solid #004B98;
+  border-top: none;
   border-radius: 0px 0px 20px 20px;
   margin-top: -54px;
   z-index: -5;
-  position: relative;
 }
 .faq__container .faq__container-accord-item.active .faq__container-accord-item-bottom p {
-  color: #000;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  height: inherit;
 }
 @media screen and (max-width: 767px) {
   .faq__container .faq__container-accord-item.active .faq__container-accord-item-bottom {

@@ -55,7 +55,6 @@
             }
         }
 
-
         .gallery-button-prev,
         .gallery-button-next{
                 border-color: $-blue;
@@ -75,6 +74,12 @@
        &-slider{
         &  .swiper-wrapper {
             padding-bottom: 30px;
+        }
+        .gallery__container-slider-slide{
+            border-radius: 20px;
+            & img{
+                border-radius: inherit;
+            }
         }
         & .swiper-pagination-bullets.swiper-pagination-bullets{
             bottom: 4px;
