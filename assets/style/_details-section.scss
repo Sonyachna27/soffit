@@ -1,0 +1,79 @@
+.details{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        &-block{
+            display: flex;
+            gap: 20px;
+            @media screen and (max-width:1023px) {
+                flex-direction: column;
+            }
+            &:nth-child(even){
+                flex-direction: row-reverse;
+                @media screen and (max-width:1023px) {
+                    flex-direction: column;
+                }
+                .details__container-block-content{
+                    gap: 30px;
+                }
+            }
+            & img{
+                max-width: 420px;
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                border-radius: 20px;
+                max-height: 420px;
+                @media screen and (max-width:1023px) {
+                    max-width: 100%;
+                }
+            }
+            &-content{
+                padding: 40px;
+                border-radius: 20px;
+                background-color: $-white;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 100%;
+                width: 100%;
+                height: fit-content;
+                @media screen and (max-width:767px) {
+                    padding: 30px;
+                }
+                @media screen and (max-width:550px) {
+                    padding: 20px;
+                }
+                & h2{
+                    color: $-blue;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-transform: none;
+                }
+                &-list{
+                    & li{
+                     position: relative;
+                     margin-left: 35px;
+                     &:before{
+                        content: url(../images/check.svg);
+                        width: 25px;
+                        height: 25px;
+                        position: absolute;
+                        left: -35px;
+                        // top: 0;
+                        transform: translate(0, -15%);
+                     }
+                    }
+                }
+                & ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 13px;
+                }
+               
+            }
+        }
+    }
+}

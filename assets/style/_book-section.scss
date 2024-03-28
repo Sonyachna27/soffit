@@ -1,0 +1,79 @@
+.book{
+    &__container{
+        &-wrap{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            @media screen and (max-width:990px) {
+                display: flex;
+                 overflow-x: scroll;
+             }
+
+             &-item{
+                display: flex;
+                    flex-direction: column;
+                    padding: 40px;
+                    border-radius: 20px;
+                    background-color: $-white;
+                    min-height: 434px;
+                    height: auto;
+                    position: relative;
+                    overflow: hidden;
+                    gap: 100px;
+                    @media screen and (max-width:990px) {
+                        padding: 20px;
+                    }
+                    @media screen and (max-width:867px) {
+                        max-width: 100%;
+                        width: 100%;
+                        min-width: calc(70% - 40px);                           
+                    }
+                    @media screen and (max-width:550px) {
+                       
+                        min-width: calc(100% - 40px);                           
+                    }
+                &-icon{
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 50%;
+                    border: 1px solid $-blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                   & svg{
+                    max-width: 50px;
+                    max-height: 50px;
+                   }
+
+                }
+                    &-content{
+                  display: flex;
+                  flex-direction: column;
+                    justify-content: space-between;
+                    gap: 10px;
+                    flex-grow: 1;
+                   & h3{
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    text-transform: uppercase;
+                    min-height: 66px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    box-orient: vertical;
+                    white-space: normal;
+                    color: $-blue;
+                    }
+                & p:not(:nth-last-of-type(1)){
+                    margin-bottom: 15px;
+                }
+                }
+            }
+        }
+    }
+}

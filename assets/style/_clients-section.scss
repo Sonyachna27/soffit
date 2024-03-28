@@ -1,0 +1,37 @@
+.clients{
+    &__container{
+        &-wrap{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            @media screen and (max-width:867px) {
+                display: flex;
+                overflow-y: scroll;
+            }
+            &-item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding:40px;
+                background-color: $-white;
+                border-radius: 20px;
+                min-height: 300px;
+                height: auto;
+               & img{
+               height: auto;
+               }
+               @media screen and (max-width:867px) {
+                max-width: 100%;
+                width: 100%;
+                min-width: calc(70% - 40px);
+                padding: 20px;
+            }
+               @media screen and (max-width:867px) {
+               
+                min-width: calc(100% - 40px);
+                padding: 10px;
+            }
+            }
+        }
+    }
+}
