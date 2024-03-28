@@ -1744,7 +1744,13 @@ p {
 }
 .area__container-map {
   border-radius: 20px;
-  max-width: 100%;
+  max-width: 750px;
+  width: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .area__container-map {
+    max-width: 100%;
+  }
 }
 .area__container-map img {
   border-radius: inherit;

@@ -52,7 +52,11 @@
         }
         &-map{
             border-radius: 20px;
-            max-width: 100%;
+            max-width: 750px;
+            width: 100%;
+            @media screen and (max-width:1023px) {
+                max-width: 100%;
+            }
             & img{
                 border-radius: inherit;
                 max-width: 100%;
