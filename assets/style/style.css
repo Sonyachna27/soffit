@@ -522,6 +522,7 @@ p {
   .header__top-socials {
     width: 100%;
     gap: 10px;
+    justify-content: center;
   }
 }
 .header__top-contacts {
@@ -537,8 +538,9 @@ p {
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 11px;
-  padding: 0px 15px 0 0;
+  padding: 5px 15px;
   text-overflow: ellipsis;
   font-size: 14px;
   font-style: normal;
@@ -548,6 +550,7 @@ p {
   max-width: -moz-fit-content;
   max-width: fit-content;
   transition: 0.3s ease;
+  position: relative;
 }
 @media screen and (max-width: 1023px) {
   .header__top-contacts a, .header__top-contacts span {
@@ -558,9 +561,13 @@ p {
 @media screen and (max-width: 367px) {
   .header__top-contacts a, .header__top-contacts span {
     gap: 7px;
+    justify-content: flex-end;
   }
 }
 .header__top-contacts a svg, .header__top-contacts span svg {
+  position: absolute;
+  left: 0;
+  top: 0;
   min-height: 30px;
   max-width: 30px;
   max-height: 30px;
