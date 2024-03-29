@@ -77,7 +77,7 @@
                         text-transform: none;
                     }
                     & a{
-                        transition: .3s ease;
+                        transition: .2s ease;
                         &:hover{
                             color: $-beruza;
                         }
@@ -101,7 +101,7 @@
                             line-height: normal;
                             @media (hover:hover) and (pointer:fine){
                                 & li{
-                                    transition: .3s ease;
+                                    transition: .2s ease;
                                     &:hover{
                                         color: $-beruza;
                                     }

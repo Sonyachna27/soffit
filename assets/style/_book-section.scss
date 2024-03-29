@@ -26,10 +26,10 @@
                     @media screen and (max-width:867px) {
                         max-width: 100%;
                         width: 100%;
-                        min-width: calc(70% - 40px);                           
+                        min-width: calc(70% - 40px);    
+                        min-height: auto;                       
                     }
                     @media screen and (max-width:550px) {
-                       
                         min-width: calc(100% - 40px);                           
                     }
                 &-icon{
@@ -50,7 +50,7 @@
                     &-content{
                   display: flex;
                   flex-direction: column;
-                    justify-content: space-between;
+                  justify-content: space-between;
                     gap: 10px;
                     flex-grow: 1;
                    & h3{
