@@ -444,7 +444,7 @@ p {
   .header:after {
     content: "";
     position: absolute;
-    top: 62px;
+    top: 67px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -540,7 +540,7 @@ p {
   align-items: center;
   justify-content: center;
   gap: 11px;
-  padding: 5px 15px;
+  padding: 0px 15px 0 0;
   text-overflow: ellipsis;
   font-size: 14px;
   font-style: normal;
@@ -556,23 +556,34 @@ p {
   .header__top-contacts a, .header__top-contacts span {
     max-width: 100%;
     width: 100%;
+    padding: 5px 15px;
+  }
+}
+@media screen and (max-width: 467px) {
+  .header__top-contacts a, .header__top-contacts span {
+    gap: 10px;
+    justify-content: flex-end;
   }
 }
 @media screen and (max-width: 367px) {
   .header__top-contacts a, .header__top-contacts span {
-    gap: 7px;
-    justify-content: flex-end;
+    gap: 10px;
+    justify-content: center;
   }
 }
 .header__top-contacts a svg, .header__top-contacts span svg {
-  position: absolute;
-  left: 0;
-  top: 0;
   min-height: 30px;
   max-width: 30px;
   max-height: 30px;
   width: 100%;
   height: 100%;
+}
+@media screen and (max-width: 1023px) {
+  .header__top-contacts a svg, .header__top-contacts span svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 .header__top-contacts a:hover {
   background-color: #36B0E1;
@@ -582,6 +593,11 @@ p {
 @media screen and (max-width: 1023px) {
   .header__top-contacts {
     width: 100%;
+  }
+}
+@media screen and (max-width: 367px) {
+  .header__top-contacts {
+    flex-direction: column;
   }
 }
 .header__bottom {
@@ -630,7 +646,7 @@ p {
     padding: 0 20px;
   }
   .open .header__bottom-container-wrap {
-    top: 64px;
+    top: 68px;
     transform: scale(1);
     align-items: flex-start;
     gap: 30px;
