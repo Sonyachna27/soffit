@@ -3,6 +3,9 @@
         background: url(../images/main-img.jpg) center center / cover no-repeat;
         border-radius: 20px;
         padding: 60px 0 284px 40px;
+        @media screen  and (max-width:867px){
+            padding: 60px 40px 284px 40px;
+        }
         &-content{
             
             max-width: 788px;
