@@ -62,8 +62,6 @@ const sliderAdvantages = new Swiper('.sliderAdvantages', {
 });
 //слайдер для главной страницы секция - галлерея
 const sliderGallery = new Swiper('.sliderGallery', {
-
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',

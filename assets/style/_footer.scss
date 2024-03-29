@@ -23,8 +23,11 @@
                    flex-direction: column; 
                 }
                 & .logo{
-                    max-width: 160px;
+                    max-width: 120px;
                     width: 100%;
+                    & img{
+                        width: 100%;
+                    }
                     @media screen and (max-width:867px) {
                         margin: 0 auto;
                     }
@@ -203,7 +206,7 @@
             @media screen and (max-width:1023px) {
                 text-align: center;
                 padding: 20px 0 0 0;
-                flex-direction: column;
+                flex-direction: column-reverse;
             }
          
         }
