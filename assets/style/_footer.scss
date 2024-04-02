@@ -36,61 +36,40 @@
                 &-block{
                     display: flex;
                     gap: 60px;
-                  
                     @media screen and (max-width:867px) {
                         flex-direction: column; 
                         
                      }
                 }
-                &-item{
+                &-item-list{
                     display: flex;
-                    flex-direction: column;
                     gap: 30px;
-                    max-width: 200px;
-                    & span:nth-of-type(1){
-                        font-size: 20px;
-                        font-style: normal;
-                        font-weight: 700;
-                        line-height: normal;
-                        text-transform: uppercase;
-                    }
+                    
                    @media screen and (max-width:1240px) {
                     word-break: break-word;
                    }
                    @media screen and (max-width:1023px) {
-                    gap: 20px;
+                   
+                    gap: 60px;
                    }
-                    &-contacts{
-                        display: flex;
-                        align-items: baseline;
+                   @media screen and (max-width:867px) {
                     flex-direction: column;
-                    gap: 10px;
-                    & a,
-                    & span{
-                        display: flex;
-                        align-items: center;
-                        gap: 5px;
-                        font-size: 16px;
+                   }
+                    
+                    & li:not(.sub-menu li) {
+                        & > a{
+                            font-size: 20px;
                         font-style: normal;
-                        font-weight: 400;
+                        font-weight: 700;
                         line-height: normal;
-                        text-transform: none;
-                    }
-                    & a{
-                        transition: .2s ease;
-                        &:hover{
-                            color: $-beruza;
+                        text-transform: uppercase;
+                        margin-bottom: 30px;
+                            @media screen and (max-width: 1024px) {
+                                margin-bottom: 16px;
+                            }
                         }
                     }
-                    & svg{
-                        min-width: 30px;
-                        min-height: 30px;
-                       
-                    }
                    
-                    }
-                    
-                    & nav{
                         & ul{
                             display: flex;
                             flex-direction: column;
@@ -108,10 +87,64 @@
                                 }
                             }
                           
-                        }
+                        
                     }
                 }
+                &-item-contacts{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    @media screen and (max-width: 1024px) {
+                        gap: 16px;
+                    }
+                    & > span:nth-of-type(1){
+                        font-size: 20px;
+                            font-style: normal;
+                            font-weight: 700;
+                            line-height: normal;
+                            text-transform: uppercase;     
+                    }
+                        
+                    & div{
+                        display: flex;
+                        align-items: baseline;
+                        flex-direction: column;
+                        gap: 10px;
+                        & a,
+                        & span{
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            text-transform: none;
+                            @media screen and (max-width:367px) {
+                                word-break: break-all;
+                                word-wrap: break-word;
+                            }
+                        }
+                        & a{
+                            transition: .2s ease;
+                            &:hover{
+                                color: $-beruza;
+                            }
+                        }
+                        
+                        & svg{
+                            min-width: 30px;
+                            min-height: 30px;
+                        
+                        }
+                    }
+                    
+                    
+                        
+                   }
                }
+               
+               
                .footer__container-links-item .footer__container-links-item-contacts span{
                 font-size: 16px;
                 font-style: normal;
